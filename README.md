@@ -1,7 +1,6 @@
 <img src="docs/TargetAnyGrasp.jpg" width="90%">
 
-# AnyGrasp SDK & Grounded-Light-HQ-SAM
-
+## 🏠 Getting Started
 ## Requirements
 - Python 3.8/3.9/3.10
 - PyTorch 1.7.1 with CUDA 11.0+
