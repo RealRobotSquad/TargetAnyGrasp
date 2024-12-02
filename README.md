@@ -1,7 +1,6 @@
 <img src="docs/TargetAnyGrasp.jpg" width="90%">
 
-# Query_AnyGrasp
-AnyGrasp SDK & Grounded-Light-HQ-SAM for queried grasp detection & tracking.
+# AnyGrasp SDK & Grounded-Light-HQ-SAM
 
 ## Requirements
 - Python 3.8/3.9/3.10
@@ -63,6 +62,7 @@ Now you can run the code that uses AnyGrasp SDK & Grounded-Light-HQ-SAM.
 
 1. Sampling
 ```
+cd TargetedAnyGrasp
 conda activate sam
 cd grasp_detection
 python sample_realsense.py
