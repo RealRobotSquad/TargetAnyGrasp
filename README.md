@@ -1,62 +1,17 @@
 <img src="docs/TargetAnyGrasp.jpg" width="90%">
 
 ## 🏠 Getting Started
-## Requirements
+### Requirements
 - Python 3.8/3.9/3.10
 - PyTorch 1.7.1 with CUDA 11.0+
 - [MinkowskiEngine](https://github.com/NVIDIA/MinkowskiEngine) v0.5.4
 
 
-## Installation for Anygrasp
-1. Follow MinkowskiEngine [instructions](https://github.com/NVIDIA/MinkowskiEngine#anaconda) to install [Anaconda](https://www.anaconda.com/), cudatoolkit, Pytorch and MinkowskiEngine. **Note that you need ``export MAX_JOBS=2;`` before ``pip install`` if you are running on an laptop due to [this issue](https://github.com/NVIDIA/MinkowskiEngine/issues/228)**. If PyTorch reports a compatibility issue during program execution, you can re-install PyTorch via Pip instead of Anaconda.
+### Installation
 
-2. Install other requirements from Pip.
-```bash
-    pip install -r requirements.txt
-```
+We provide the installation guide [here](Install/install.md). You can install locally or use docker and verify the installation easily.
 
-3. Install ``pointnet2`` module.
-```bash
-    cd pointnet2
-    python setup.py install
-```
-
-## License Registration
-
-After you apply for the SDK license from [Anygrasp](https://github.com/graspnet/anygrasp_sdk), put the license in ./grasp_detection/ and follow the [instruction](https://github.com/graspnet/anygrasp_sdk/blob/main/license_registration/README.md).
-
-## Model Weight
-
-After you get the [checkpoints](https://drive.google.com/file/d/1jNvqOOf_fR3SWkXuz8TAzcHH9x8gE8Et/view) of grasp_dectection, follow the [instruction](https://github.com/graspnet/anygrasp_sdk/tree/main/grasp_detection) and put model weights under ./grasp_detection/log/.
-
-## Installation for Grounded-Light-HQSAM
-Please follow [Grounded-SAM's Installation](https://github.com/IDEA-Research/Grounded-Segment-Anything) to create an additional conda env called sam:
-```
-conda create -n sam python=3.9
-export AM_I_DOCKER=False
-export BUILD_WITH_CUDA=True
-export CUDA_HOME=/path/to/cuda-11.8/
-```
-Then install torch:
-```
-pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118
-```
-Then:
-```
-python -m pip install -e segment_anything
-pip install --no-build-isolation -e GroundingDINO
-pip install --upgrade diffusers[torch]
-pip install opencv-python pycocotools matplotlib onnxruntime onnx ipykernel
-```
-Download pretrained Light-HQSAM weight [here](https://huggingface.co/lkeab/hq-sam/resolve/main/sam_hq_vit_tiny.pth) and put it in ./Grounded-Segment-Anything/EfficientSAM/, then download the pretrained groundingdino weights:
-```
-cd Grounded-Segment-Anything
-
-# download the pretrained groundingdino-swin-tiny model
-wget https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
-```
-
-## Pipeline
+### Pipeline
 Now you can run the code that uses AnyGrasp SDK & Grounded-Light-HQ-SAM.
 
 1. Sampling
