@@ -10,7 +10,7 @@ Follow the steps below to set up your environment and install MinkowskiEngine:
 
 ```bash
 # Step 1: Create and activate a new conda environment
-conda create -n testtargetanygrasp python=3.9.20
+conda create -n targetanygrasp python=3.9.20
 conda activate testtargetanygrasp
 
 # Step 2: Install PyTorch with CUDA support
